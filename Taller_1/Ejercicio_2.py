@@ -1,0 +1,16 @@
+#Prodcuto punto y producto cruz matrices
+import numpy as np
+m1 = ([(1,2,3),(4,5,6),(9,8,7)])
+m2 = ([(6,7,8),(9,1,2),(3,5,7)])
+ms1 = np.add(m1, m2) 
+mr2 = np.subtract(m1, m2)
+mpp = np.multiply(m1, m2)
+mpx = np.cross(m1, m2)
+md1 = np.divide(m1, m2)
+print(f"Vector1: \n{m1}")
+print(f"Vector2: \n{m2}")
+print(f"Resultado de la suma: \n{ms1}")
+print(f"Resultado de la resta: \n{mr2}")
+print(f"Resultado del producto punto: \n{mpp}")
+print(f"Resultado del producto cruz: \n{mpx}")
+print(f"Resultado de la division: \n{md1}")

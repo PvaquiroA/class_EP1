@@ -1,3 +1,5 @@
 # Ejemplo de Python
-print("Este es el archivo example_1908")
-print("Creado por Paola Vaquiro el 21 de agosto de 2025")
+p = [6, -3, 8]
+r = [-2, 7, 3]
+pr = [a + b for a, b in zip(p, r)]
+print("Resultado de la suma:", pr)
