@@ -3,11 +3,12 @@
 
 print("\n**** Desea continuar Si/No ****")
 
-respuesta = "Si"
+respuesta = "si"
 
-while respuesta == "Si":
-    respuesta = input("\n¿Desea continuar? (Si/No): ")
+while respuesta == "si":
+    respuesta = input("\n¿Desea continuar? (Si/No): ").lower()
+    print(respuesta)
     if respuesta == "No" or respuesta == "nO" or respuesta == "NO" or respuesta == "no":
-        respuesta = "No"
+        respuesta = "no"
     else:
-        respuesta = "Si"
+        respuesta = "si"
