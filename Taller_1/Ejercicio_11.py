@@ -5,10 +5,15 @@ print("\n**** Desea continuar Si/No ****")
 
 respuesta = "si"
 
+
 while respuesta == "si":
-    respuesta = input("\n¿Desea continuar? (Si/No): ").lower()
+    respuesta = input("\n¿Desea contisinuar? (Si/No): ").lower()
     print(respuesta)
-    if respuesta == "No" or respuesta == "nO" or respuesta == "NO" or respuesta == "no":
-        respuesta = "no"
+    if respuesta!="si":
+        if respuesta=="no":
+            break
+        else:
+            print("Ingrese una opcion validas")
+            respuesta = "si"
     else:
         respuesta = "si"
