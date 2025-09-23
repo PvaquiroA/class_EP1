@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import math
 
 
 class Ui_MainWindow(object):
@@ -18,43 +19,105 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(20, 150, 101, 23))
+        self.pushButton.setGeometry(QtCore.QRect(20, 150, 121, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(20, 180, 101, 23))
+        self.pushButton_2.setGeometry(QtCore.QRect(20, 180, 121, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(20, 210, 101, 23))
+        self.pushButton_3.setGeometry(QtCore.QRect(20, 210, 121, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_3.setFont(font)
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(20, 240, 101, 23))
+        self.pushButton_4.setGeometry(QtCore.QRect(20, 240, 121, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_4.setFont(font)
         self.pushButton_4.setObjectName("pushButton_4")
         self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_5.setGeometry(QtCore.QRect(20, 270, 101, 23))
+        self.pushButton_5.setGeometry(QtCore.QRect(20, 270, 121, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_5.setFont(font)
         self.pushButton_5.setObjectName("pushButton_5")
         self.pushButton_6 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_6.setGeometry(QtCore.QRect(150, 150, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_6.setFont(font)
         self.pushButton_6.setObjectName("pushButton_6")
         self.pushButton_7 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_7.setGeometry(QtCore.QRect(150, 180, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_7.setFont(font)
         self.pushButton_7.setObjectName("pushButton_7")
         self.pushButton_8 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_8.setGeometry(QtCore.QRect(150, 210, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_8.setFont(font)
         self.pushButton_8.setObjectName("pushButton_8")
         self.pushButton_9 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_9.setGeometry(QtCore.QRect(150, 240, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_9.setFont(font)
         self.pushButton_9.setObjectName("pushButton_9")
         self.pushButton_10 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_10.setGeometry(QtCore.QRect(150, 270, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_10.setFont(font)
         self.pushButton_10.setObjectName("pushButton_10")
         self.pushButton_11 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_11.setGeometry(QtCore.QRect(150, 300, 101, 23))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_11.setFont(font)
         self.pushButton_11.setObjectName("pushButton_11")
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(290, 210, 141, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_2.setGeometry(QtCore.QRect(290, 160, 141, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.textEdit_2.setFont(font)
+        self.textEdit_2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.textEdit_2.setObjectName("textEdit_2")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(230, 20, 201, 101))
@@ -73,14 +136,6 @@ class Ui_MainWindow(object):
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(290, 300, 141, 31))
         self.label_5.setObjectName("label_5")
-        self.pushButton_12 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_12.setGeometry(QtCore.QRect(20, 310, 101, 23))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_12.setFont(font)
-        self.pushButton_12.setObjectName("pushButton_12")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(290, 260, 111, 21))
         self.label_6.setObjectName("label_6")
@@ -95,6 +150,18 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        self.pushButton.clicked.connect(self.Suma)
+        self.pushButton_2.clicked.connect(self.Resta)
+        self.pushButton_3.clicked.connect(self.Multiplicacion)
+        self.pushButton_4.clicked.connect(self.Cociente)
+        self.pushButton_5.clicked.connect(self.Residuo)
+        self.pushButton_6.clicked.connect(self.Seno)
+        self.pushButton_7.clicked.connect(self.Coseno)
+        self.pushButton_8.clicked.connect(self.Tangente)
+        self.pushButton_9.clicked.connect(self.Secante)
+        self.pushButton_10.clicked.connect(self.Cotangente)
+        self.pushButton_11.clicked.connect(self.Cosecante)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -115,10 +182,87 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Jeisson Avila </span></p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Paola Vaquiro </span></p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\"><br/></span></p></body></html>"))
-        self.pushButton_12.setText(_translate("MainWindow", "CALCULAR"))
         self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">RESULTADO</span></p></body></html>"))
-import logo_rc
 
+    def getValues(self):
+        """Obtiene los valores de los cuadros de texto como enteros."""
+        try:
+            v1 = int(self.textEdit_2.toPlainText())
+        except:
+            v1 = 0
+        try:
+            v2 = int(self.textEdit.toPlainText())
+        except:
+            v2 = 0
+        return v1, v2
+
+    def showResult(self, result):
+        """Muestra el resultado en el label_5."""
+        self.label_5.setText(str(result))
+
+    def Suma(self):
+        v1, v2 = self.getValues()
+        self.showResult(v1 + v2)
+
+    def Resta(self):
+        v1, v2 = self.getValues()
+        self.showResult(v1 - v2)
+
+    def Multiplicacion(self):
+        v1, v2 = self.getValues()
+        self.showResult(v1 * v2)
+
+    def Cociente(self):
+        v1, v2 = self.getValues()
+        if v2 != 0:
+            self.showResult(v1 // v2)  # división entera
+        else:
+            self.showResult("Error")
+
+    def Residuo(self):
+        v1, v2 = self.getValues()
+        if v2 != 0:
+            self.showResult(v1 % v2)
+        else:
+            self.showResult("Error")
+
+    def Seno(self):
+        v1, _ = self.getValues()
+        self.showResult(round(math.sin(math.radians(v1)), 4))
+
+    def Coseno(self):
+        v1, _ = self.getValues()
+        self.showResult(round(math.cos(math.radians(v1)), 4))
+
+    def Tangente(self):
+        v1, _ = self.getValues()
+        try:
+            self.showResult(round(math.tan(math.radians(v1)), 4))
+        except:
+            self.showResult("Error")
+
+    def Secante(self):
+        v1, _ = self.getValues()
+        try:
+            self.showResult(round(1 / math.cos(math.radians(v1)), 4))
+        except:
+            self.showResult("Error")
+
+    def Cotangente(self):
+        v1, _ = self.getValues()
+        try:
+            self.showResult(round(1 / math.tan(math.radians(v1)), 4))
+        except:
+            self.showResult("Error")
+
+    def Cosecante(self):
+        v1, _ = self.getValues()
+        try:
+            self.showResult(round(1 / math.sin(math.radians(v1)), 4))
+        except:
+            self.showResult("Error")
+
+import logo_rc
 
 if __name__ == "__main__":
     import sys
