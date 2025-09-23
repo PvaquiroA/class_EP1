@@ -10,9 +10,9 @@ resta = nums1-nums2
 producto_p = nums1 * nums2
 producto_c = np.cross(nums1, nums2)
 
-print(f"Datos del vector1: \n{nums1}")
-print(f"Datos del vector2: \n{nums2}")
+print(f"Vector1: \n{nums1}")
+print(f"Vector2: \n{nums2}")
 print(f"Resultado de la suma de los vectores: \n{suma}")
-print(f"Resultado de restar el vertor 2 del vector 1: \n{resta}")
-print(f"Resultado de producto punto de los vectores: \n{producto_p}")
-print(f"Resultado de producto cruz de los vectores: \n{producto_c}")
+print(f"Resultado de la resta: \n{resta}")
+print(f"Resultado de producto punto: \n{producto_p}")
+print(f"Resultado de producto cruz: \n{producto_c}")

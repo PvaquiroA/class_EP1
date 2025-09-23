@@ -197,4 +197,3 @@ elif opcion == 3:
     LineaRecta(25, -6, 29, -6)
 
 plt.show()
-1
