@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="cld">
+    <file>cilindrico.jpg</file>
+  </qresource>
+</RCC>
