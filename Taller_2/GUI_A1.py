@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import math
+import math   # <--- Importamos librería matemática
 
 
 class Ui_MainWindow(object):
@@ -116,13 +116,16 @@ class Ui_MainWindow(object):
         self.textEdit_2.setGeometry(QtCore.QRect(290, 160, 141, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
+        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
         self.textEdit_2.setFont(font)
         self.textEdit_2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.textEdit_2.setObjectName("textEdit_2")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(230, 20, 201, 101))
-        self.label.setStyleSheet("border-image: url(:/cct/logo.png);")
+        self.label.setStyleSheet("")
         self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("logo.png"))
+        self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(60, 50, 111, 21))
@@ -135,6 +138,11 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(290, 300, 141, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(290, 260, 111, 21))
@@ -151,6 +159,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        # ---- Conexión de botones con funciones ----
         self.pushButton.clicked.connect(self.Suma)
         self.pushButton_2.clicked.connect(self.Resta)
         self.pushButton_3.clicked.connect(self.Multiplicacion)
@@ -181,11 +190,10 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Sara Barreto </span></p></body></html>"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Jeisson Avila </span></p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Paola Vaquiro </span></p></body></html>"))
-        self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\"><br/></span></p></body></html>"))
-        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">RESULTADO</span></p></body></html>"))
+        self.label_5.setText(_translate("MainWindow", ""))
+        self.label_6.setText(_translate("MainWindow", "RESULTADO"))
 
     def getValues(self):
-        """Obtiene los valores de los cuadros de texto como enteros."""
         try:
             v1 = int(self.textEdit_2.toPlainText())
         except:
@@ -197,7 +205,6 @@ class Ui_MainWindow(object):
         return v1, v2
 
     def showResult(self, result):
-        """Muestra el resultado en el label_5."""
         self.label_5.setText(str(result))
 
     def Suma(self):
@@ -215,7 +222,7 @@ class Ui_MainWindow(object):
     def Cociente(self):
         v1, v2 = self.getValues()
         if v2 != 0:
-            self.showResult(v1 // v2)  # división entera
+            self.showResult(v1 / v2)
         else:
             self.showResult("Error")
 
@@ -261,8 +268,6 @@ class Ui_MainWindow(object):
             self.showResult(round(1 / math.sin(math.radians(v1)), 4))
         except:
             self.showResult("Error")
-
-import logo_rc
 
 if __name__ == "__main__":
     import sys

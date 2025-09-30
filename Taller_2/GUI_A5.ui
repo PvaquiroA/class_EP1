@@ -24,11 +24,16 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/cct/logo.png);
-background-image: url(:/cct/logo.png);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -139,9 +144,8 @@ background-image: url(:/cct/logo.png);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../../../Downloads/logo.qrc"/>
   <include location="logo.qrc"/>
-  <include location="../../../Downloads/logo.qrc"/>
+  <include location="logo.qrc"/>
   <include location="cartesiano.qrc"/>
  </resources>
  <connections/>
